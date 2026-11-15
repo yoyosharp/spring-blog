@@ -1,4 +1,0 @@
-package com.yoyodev.starter.Service.impl;
-
-public class UserServiceImpl {
-}
