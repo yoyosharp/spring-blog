@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.yoyodev</groupId>
+        <artifactId>spring-blog</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>spring-blog-common</artifactId>
+    <name>spring-blog-common</name>
+    <description>Shared cross-cutting module: enums, exceptions, response wrapper, principal model, security port. Depends on core only.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.yoyodev</groupId>
+            <artifactId>spring-blog-core</artifactId>
+        </dependency>
+        <!-- GrantedAuthority / AbstractAuthenticationToken / AuthenticationException -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!-- jakarta.validation for EnumValidator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!-- spring-web for RequestContextHelper / @ControllerAdvice -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
